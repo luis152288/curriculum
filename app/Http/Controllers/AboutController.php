@@ -54,7 +54,7 @@ class AboutController extends Controller
             'barra' => $request->input('barra'),
         ]);
 
-        return redirect()->route('about')->with('mensaje', 'creacion exitosa');
+        return view('/about')->with('mensaje', 'creacion exitosa');
     }
 
     /**
@@ -97,7 +97,7 @@ class AboutController extends Controller
             'barra' => $request->input('barra'),
         ]);
 
-        return redirect()->route('about')->with('mensaje', 'Actualizacion exitosa');
+        return redirect()->route('/about')->with('mensaje', 'Actualizacion exitosa');
     }
 
     /**

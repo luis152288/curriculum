@@ -47,7 +47,7 @@ class ExperiencesController extends Controller
      */
     public function store(Request $request)
     {
-        $experiences::create([
+        Experiences::create([
             'img-fontawesome' => $request->input('img-fontawesome'),
             'titulo' => $request->input('titulo'),
             'descripcion' => $request->input('descripcion'),

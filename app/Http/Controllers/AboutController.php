@@ -2,10 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use App\About;
 
-class AboutCotroller extends Controller
+class AboutController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +24,8 @@ class AboutCotroller extends Controller
      */
     public function index()
     {
-        //
+        $about = About::paginate();
+        return view('about.index', compact('about'));
     }
 
     /**
@@ -23,7 +35,8 @@ class AboutCotroller extends Controller
      */
     public function create()
     {
-        //
+        $about = new About();
+        return view('about.create',compact('about'));
     }
 
     /**
@@ -34,7 +47,14 @@ class AboutCotroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        About::create([
+            'descripcion' => $request->input('descripcion'),
+            'skill' => $request->input('skill'),
+            'nivel' => $request->input('nivel'),
+            'barra' => $request->input('barra'),
+        ]);
+
+        return redirect()->route('about')->with('mensaje', 'creacion exitosa');
     }
 
     /**
@@ -56,7 +76,8 @@ class AboutCotroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $about = About::findOrFail($id);
+        return view('about.edit', compact('about'));
     }
 
     /**
@@ -68,7 +89,15 @@ class AboutCotroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $about = About::findOrFail($id);
+        $about->update([
+            'descripcion' => $request->input('descripcion'),
+            'skill' => $request->input('skill'),
+            'nivel' => $request->input('nivel'),
+            'barra' => $request->input('barra'),
+        ]);
+
+        return redirect()->route('about')->with('mensaje', 'Actualizacion exitosa');
     }
 
     /**
@@ -79,6 +108,7 @@ class AboutCotroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        About::destroy($id);
+        return redirect('/about')->with('mensaje', 'eliminado');
     }
 }

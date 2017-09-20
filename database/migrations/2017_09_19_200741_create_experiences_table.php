@@ -15,6 +15,10 @@ class CreateExperiencesTable extends Migration
     {
         Schema::create('experiences', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('img-fontawesome');
+            $table->string('titulo');
+            $table->string('descripcion');
+            $table->enum('color', ['color-white', 'color-grey']);
             $table->timestamps();
         });
     }

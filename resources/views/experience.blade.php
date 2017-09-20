@@ -37,8 +37,8 @@
                                         <a href="#" class="content-wrapper-link"></a>    
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="service" data-height="height">
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
                                         <div class="service-element">
                                             <i class="service-icon fa fa-html5"></i>
                                         </div>
@@ -49,7 +49,7 @@
                                         <a href="#" class="content-wrapper-link"></a>    
                                     </div>
                                 </div>
-                                 <div class="col-md-4">
+                                 <div class="col-md-4 md-margin-b-4">
                                     <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
                                         <div class="service-element">
                                             <i class="service-icon color-white fa fa-database" aria-hidden="true"></i>

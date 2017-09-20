@@ -25,8 +25,8 @@
                                         <div class="work-popup-content">
                                             <a href="javascript:void(0);" class="work-popup-close">Hide</a>
                                             <div class="margin-b-30">
-                                                <h3 class="margin-b-5">Art Of Coding</h3>
-                                                <span>Clean &amp; Minimalistic Design</span>
+                                                <h3 class="margin-b-5">Laminart</h3>
+                                                <span>web site official</span>
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
@@ -64,8 +64,8 @@
                                         <div class="work-popup-content">
                                             <a href="javascript:void(0);" class="work-popup-close">Hide</a>
                                             <div class="margin-b-30">
-                                                <h3 class="margin-b-5">Art Of Coding</h3>
-                                                <span>Clean &amp; Minimalistic Design</span>
+                                                <h3 class="margin-b-5">Lamika</h3>
+                                                <span>Web site official</span>
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
@@ -103,8 +103,8 @@
                                         <div class="work-popup-content">
                                             <a href="javascript:void(0);" class="work-popup-close">Hide</a>
                                             <div class="margin-b-30">
-                                                <h3 class="margin-b-5">Art Of Coding</h3>
-                                                <span>Clean &amp; Minimalistic Design</span>
+                                                <h3 class="margin-b-5">Doctor</h3>
+                                                <span>Landing page</span>
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">

@@ -46,8 +46,8 @@
                         <!-- Logo -->
                         <div class="logo">
                             <a class="logo-wrap" href="#body">
-                                <img class="logo-img logo-img-active" src="img/logo.png" alt="Asentus Logo">
-                                <img class="logo-img logo-img-main" src="img/logo-light.png" alt="Asentus Logo">
+                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Logo">
+                                <img class="logo-img logo-img-main" src="img/logo.png" alt="Logo">
                             </a>
                         </div>
                         <!-- End Logo -->
@@ -134,7 +134,7 @@
             <div class="content container">
                 <div class="row">
                     <div class="col-xs-6">
-                        <img class="footer-logo" src="img/logo.png" alt="Logo">
+                        <img class="footer-logo" src="img/logo-dark.png" alt="Logo">
                     </div>
                     <div class="col-xs-6 text-right sm-text-left">
                         <p class="margin-b-0">Lemd copyright &copy; All right reserved</p>

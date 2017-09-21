@@ -13,8 +13,8 @@
 	<div class="row">
 		<div class="col-md-8">
 				<div class="form-group col-md-4">
-					<input type="text" class="form-control" id="img-fontawesome" name="img-fontawesome" 
-        			value="{{ $experiences->descripcion or old('descripcion') }}" placeholder="imagen"> 
+					<input type="text" class="form-control" id="img" name="img" 
+        			value="{{ $experiences->img or old('img') }}" placeholder="imagen"> 
 				</div>
 				<div class="form-group col-md-4">
 					<select name="color" id="color" class="form-control" required>

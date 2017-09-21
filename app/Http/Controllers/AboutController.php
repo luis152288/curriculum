@@ -48,13 +48,12 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         About::create([
-            'descripcion' => $request->input('descripcion'),
             'skill' => $request->input('skill'),
             'nivel' => $request->input('nivel'),
             'barra' => $request->input('barra'),
         ]);
 
-        return view('/about')->with('mensaje', 'creacion exitosa');
+        return redirect('/about')->with('mensaje', 'creacion exitosa');
     }
 
     /**
@@ -91,13 +90,12 @@ class AboutController extends Controller
     {
         $about = About::findOrFail($id);
         $about->update([
-            'descripcion' => $request->input('descripcion'),
             'skill' => $request->input('skill'),
             'nivel' => $request->input('nivel'),
             'barra' => $request->input('barra'),
         ]);
 
-        return redirect()->route('/about')->with('mensaje', 'Actualizacion exitosa');
+        return redirect('/about')->with('mensaje', 'Actualizacion exitosa');
     }
 
     /**

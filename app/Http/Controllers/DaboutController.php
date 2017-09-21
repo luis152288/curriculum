@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use App\Experiences;
+use App\Dabout;
 
-class ExperiencesController extends Controller
+class DaboutController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,8 +24,8 @@ class ExperiencesController extends Controller
      */
     public function index()
     {
-        $experiences = Experiences::paginate();
-        return view('experience.index', compact('experiences'));
+        $dabout = Dabout::paginate();
+        return view('dabout.index',compact('dabout'));
     }
 
     /**
@@ -35,8 +35,8 @@ class ExperiencesController extends Controller
      */
     public function create()
     {
-        $experiences = new Experiences();
-        return view('experience.create', compact('experiences'));
+        $dabout = new Dabout();
+        return view('dabout.create',compact('dabout'));
     }
 
     /**
@@ -47,14 +47,11 @@ class ExperiencesController extends Controller
      */
     public function store(Request $request)
     {
-        Experiences::create([
-            'img' => $request->input('img'),
-            'titulo' => $request->input('titulo'),
-            'descripcion' => $request->input('descripcion'),
-            'color' => $request->input('color')
+        Dabout::create([
+        'descripcion' => $request->input('descripcion'),
         ]);
 
-        return redirect('/experience')->with('mensaje', 'creacion exitosa');
+        return redirect('/dabout')->with('mensaje', 'creacion exitosa');
     }
 
     /**
@@ -76,8 +73,8 @@ class ExperiencesController extends Controller
      */
     public function edit($id)
     {
-        $experiences = Experiences::findOrFail($id);
-        return view('experience.edit', compact('experiences'));        
+        $dabout = Dabout::findOrFail($id);
+        return view('dabout.edit', compact('dabout'));
     }
 
     /**
@@ -89,15 +86,12 @@ class ExperiencesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $experiences = experiences::findOrFail($id);
-        $experiences->update([
-            'img' => $request->input('img'),
-            'titulo' => $request->input('titulo'),
+        $dabout = Dabout::findOrFail($id);
+        $dabout->update([
             'descripcion' => $request->input('descripcion'),
-            'color' => $request->input('color')
         ]);
 
-        return redirect('/experience')->with('mensaje', 'Actualizacion exitosa');
+        return redirect('/dabout')->with('mensaje', 'Actualizacion exitosa');
     }
 
     /**
@@ -108,7 +102,7 @@ class ExperiencesController extends Controller
      */
     public function destroy($id)
     {
-        Experiences::destroy($id);
-        return redirect('/experience')->with('mensaje', 'eliminado');
+        Dabout::destroy($id);
+        return redirect('/dabout')->with('mensaje', 'eliminado');
     }
 }

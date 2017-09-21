@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8">
         	@if(Session::has('mensaje'))
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -28,10 +28,10 @@
 								<td>{{ $experiences->id}}</td>
 								<td>{{ $experiences->titulo}}</td>
 								<td>{{ $experiences->descripcion}}</td>
-								<td>{{ $experiences->img-fontawesome}}</td>
+								<td>{{ $experiences->img}}</td>
 								<td>{{ $experiences->color}}</td>
 								<td>
-									<a href="{{ url('/experience/' . $experiences->id . '/edit') }}" class="btn btn-link">
+									<a href="{{ url('/experience/' .$experiences->id. '/edit') }}" class="btn btn-link">
 										<i class="fa fa-pencil fa-2x"></i>
 									</a>
 								</td>

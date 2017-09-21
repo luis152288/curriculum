@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExperiencesTable extends Migration
+class CreateDaboutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateExperiencesTable extends Migration
      */
     public function up()
     {
-        Schema::create('experiences', function (Blueprint $table) {
+        Schema::create('dabouts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('img');
-            $table->string('titulo');
-            $table->string('descripcion');
-            $table->enum('color', ['color-white', 'color-grey']);
+            $table->mediumText('descripcion');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateExperiencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('experiences');
+        Schema::dropIfExists('dabouts');
     }
 }

@@ -9,13 +9,23 @@ use App\Works;
 class WorksController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $works = Works::paginate();
+        return view('works.index', compact('works'));
     }
 
     /**
@@ -25,7 +35,8 @@ class WorksController extends Controller
      */
     public function create()
     {
-        //
+        $works= new Works();
+        return view('works.create',compact('works'));
     }
 
     /**
@@ -36,7 +47,39 @@ class WorksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file_route = null;
+
+        $this->validate($request,[
+            'imagen' => 'image|mimes:jpg,jpeg,png',
+            ]);
+
+        if($request->file('imagen')){
+            //capturando imagen
+            $img = $request->file('imagen');
+            //obtener nombre
+            $file_route = $img->getClientOriginalName();
+            //almacenamiento
+            Storage::disk('imagenes')->put($file_route,file_get_contents($img->getRealPath()));
+
+        }else{
+        $file_route= "no-disponible.png";
+    }
+
+    Works::create([
+        'imagen' => $file_route,
+        'titulo' => $request->input('titulo'),
+        'subtitulo' => $request->input('subtitulo'),
+        'descripcion' => $request->input('descripcion'),
+        'tag1' => $request->input('tag1'),
+        'tag2' => $request->input('tag2'),
+        'tag3' => $request->input('tag3'),
+        'nombre1' => $request->input('nombre1'),
+        'nombre2' => $request->input('nombre2'),
+        'nombre3' => $request->input('nombre3'),
+        'cliente' => $request->input('cliente'),
+        ]);
+
+        return redirect('/works')->with('mensaje', 'creacion exitosa');
     }
 
     /**
@@ -58,7 +101,8 @@ class WorksController extends Controller
      */
     public function edit($id)
     {
-        //
+        $works = Works::findOrFail($id);
+        return view('works.edit', compact('works'));
     }
 
     /**
@@ -70,7 +114,40 @@ class WorksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $file_route = null;
+
+        $this->validate($request,[
+            'imagen' => 'image|mimes:jpg,jpeg,png',
+            ]);
+
+        if ($request->file('imagen')) {
+            #captura de imagen
+            $img = $request->file('imagen');
+            #optener nombre de archivo
+            $file_route = $img->getClientOriginalName();
+            #alamcenar imagen
+            Storage::disk('imagenes')->put($file_route,file_get_contents($img->getRealPath()));
+
+        }else{
+            $file_route = "no-disponible.png";
+        }
+        
+        $works = Works::findOrFail($id);
+        $works->update([
+            'imagen' => $file_route,
+            'titulo' => $request->input('titulo'),
+            'subtitulo' => $request->input('subtitulo'),
+            'descripcion' => $request->input('descripcion'),
+            'tag1' => $request->input('tag1'),
+            'tag2' => $request->input('tag2'),
+            'tag3' => $request->input('tag3'),
+            'nombre1' => $request->input('nombre1'),
+            'nombre2' => $request->input('nombre2'),
+            'nombre3' => $request->input('nombre3'),
+            'cliente' => $request->input('cliente'),
+            ]);
+
+        return redirect('/works')->with('mensaje', 'cambios efectuados exitosamente');
     }
 
     /**
@@ -81,6 +158,7 @@ class WorksController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Works::destroy($id);
+        return redirect('/works')->with('mensaje', 'eliminado');
     }
 }

@@ -13,6 +13,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
+
+    <style>
+        .dropdown-menu a{
+            color: grey;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -71,6 +77,40 @@
                 </div>
             </div>
         </nav>
+        
+        @auth
+     <div class="col-md-4">
+
+          <!-- Search Widget -->
+          <div class="panel panel-default col-md-8 text-center">
+            <h4 class="panel-header">Secciones</h4>
+            <div class="panel-body">
+                <div class="dropdown">
+                  <button class="form-control btn btn-dark dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Dashboard <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{{ url('/index') }}"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a><hr>
+                    <a class="dropdown-item" href="{{ url('/about') }}"><i class="fa fa-address-card fa-2x" aria-hidden="true"></i> About</a><hr>
+                    <a class="dropdown-item" href="{{ url('/experience') }}"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i> Experience</a><hr>
+                    <a class="dropdown-item" href="{{ url('/works') }}"><i class="fa fa-building fa-2x" aria-hidden="true"></i> Work</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <!--  -->
+        <!--<div class="panel panel-default col-md-8">
+            <div>
+                <div>
+                        <div>
+                            
+                        </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+        @endauth
 
         @yield('content')
     </div>

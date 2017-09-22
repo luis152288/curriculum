@@ -21,6 +21,7 @@
                     		<th>DESCRIPCION</th>
                     		<th>IMAGEN</th>
                     		<th>COLOR</th>
+                    		<th>FONDO</th>
                     		<th colspan="2" width="5%">ACCIONES</th>
                     	</tr>
 						@foreach($experiences as $experiences)
@@ -30,6 +31,7 @@
 								<td>{{ $experiences->descripcion}}</td>
 								<td>{{ $experiences->img}}</td>
 								<td>{{ $experiences->color}}</td>
+								<td>{{ $experiences->fondo}}</td>
 								<td>
 									<a href="{{ url('/experience/' .$experiences->id. '/edit') }}" class="btn btn-link">
 										<i class="fa fa-pencil fa-2x"></i>

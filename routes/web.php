@@ -26,3 +26,5 @@ Route::resource('/about', 'AboutController');
 Route::resource('/experience', 'ExperiencesController');
 
 Route::resource('/works', 'WorksController');
+
+Route::get('/', 'FrontendController@index');

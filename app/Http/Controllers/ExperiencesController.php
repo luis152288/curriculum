@@ -51,7 +51,8 @@ class ExperiencesController extends Controller
             'img' => $request->input('img'),
             'titulo' => $request->input('titulo'),
             'descripcion' => $request->input('descripcion'),
-            'color' => $request->input('color')
+            'color' => $request->input('color'),
+            'fondo' => $request->input('fondo'),
         ]);
 
         return redirect('/experience')->with('mensaje', 'creacion exitosa');
@@ -94,7 +95,8 @@ class ExperiencesController extends Controller
             'img' => $request->input('img'),
             'titulo' => $request->input('titulo'),
             'descripcion' => $request->input('descripcion'),
-            'color' => $request->input('color')
+            'color' => $request->input('color'),
+            'fondo' => $request->input('fondo'),
         ]);
 
         return redirect('/experience')->with('mensaje', 'Actualizacion exitosa');

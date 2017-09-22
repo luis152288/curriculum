@@ -19,6 +19,7 @@ class CreateExperiencesTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->enum('color', ['color-white', 'color-grey']);
+            $table->enum('fondo', ['bg-color-base', 'no']);
             $table->timestamps();
         });
     }

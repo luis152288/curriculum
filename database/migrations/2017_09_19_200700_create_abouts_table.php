@@ -17,7 +17,6 @@ class CreateAboutsTable extends Migration
             $table->increments('id');
             $table->string('skill');
             $table->string('nivel');
-            $table->string('barra');
             $table->timestamps();
         });
     }

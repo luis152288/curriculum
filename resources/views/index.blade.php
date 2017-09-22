@@ -1,11 +1,12 @@
 @section ('index')
- <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+@foreach ($index as $index)
+ <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="{{ asset('imagenes/'.$index->imagen) }}">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="promo-block-divider">
-                            <h1 class="promo-block-title">Luis <br/> Muñoz</h1>
-                            <p class="promo-block-text">Desarrollador Web &amp; Full-stack Developer</p>
+                            <h1 class="promo-block-title">{{ $index->nombre}}</h1>
+                            <p class="promo-block-text">{{ $index->descripcion}}</p>
                         </div>
                         <ul class="list-inline">
                             <li><a href="#" class="social-icons"><i class="icon-social-facebook"></i></a></li>
@@ -19,4 +20,5 @@
                 <!--// end row -->
             </div>
         </div>
+        @endforeach
 @endsection

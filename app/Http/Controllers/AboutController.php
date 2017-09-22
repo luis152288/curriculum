@@ -50,7 +50,6 @@ class AboutController extends Controller
         About::create([
             'skill' => $request->input('skill'),
             'nivel' => $request->input('nivel'),
-            'barra' => $request->input('barra'),
         ]);
 
         return redirect('/about')->with('mensaje', 'creacion exitosa');
@@ -92,8 +91,7 @@ class AboutController extends Controller
         $about->update([
             'skill' => $request->input('skill'),
             'nivel' => $request->input('nivel'),
-            'barra' => $request->input('barra'),
-        ]);
+            ]);
 
         return redirect('/about')->with('mensaje', 'Actualizacion exitosa');
     }

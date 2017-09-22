@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
         	@if(Session::has('mensaje'))
 			<div class="alert alert-success alert-dismissible" role="alert">
 			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -11,7 +11,7 @@
 			</div>
         	@endif
             <div class="panel panel-default">
-                <div class="panel-heading">Seccion About</div>
+                <div class="panel-heading">Seccion Works</div>
                 <div class="panel-body">
 					<a href="{{ url('/works/create') }}" class="btn btn-primary">Crear</a><hr>
                     <table class="table table-bordered">
@@ -21,6 +21,7 @@
                     		<td>ARCHIVO</td>
                     		<td>TITULO</td>
                     		<td>SUBTITULO</td>
+                    		<td>DESCRIPCION</td>
                     		<td>CLIENTE</td>
                     		<td colspan="3" width="10%">TAG</td>
                     		<td colspan="3" width="10%" >NOMBRES</td>
@@ -33,6 +34,7 @@
 								<th>{{ $works->imagen}}</th>
 								<th>{{ $works->titulo}}</th>
 								<th>{{ $works->subtitulo}}</th>
+								<th>{{ $works->descripcion}}</th>
 								<th>{{ $works->cliente}}</th>
 								<th>{{ $works->tag1}}</th>
 								<th>{{ $works->tag2}}</th>

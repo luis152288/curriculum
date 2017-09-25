@@ -16,7 +16,7 @@
                         <div class="masonry-grid row row-space-2">
                             <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
                             @foreach ($works as $works)
-                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 margin-b-4">
                                 <!-- Work -->
                                 <div class="work work-popup-trigger">
                                     <div class="work-overlay">

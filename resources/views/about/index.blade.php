@@ -32,13 +32,12 @@
 									</a>
 								</td>
 								<td>
-									
-									<form id="delete-about-form" action="{{ url('/about/'.$about->id) }}" method="post">
 									<a href="javascript:void();" class="btn btn-link"
 										onclick="event.preventDefault();
                                                      document.getElementById('delete-about-form').submit();">
 										<i class="fa fa-trash fa-2x"></i>
 									</a>
+									<form id="delete-about-form" action="{{ url('/about/'.$about->id) }}" method="post">
 										{{ method_field('DELETE')}}
 										{{ csrf_field() }}						
 									</form>

@@ -90,42 +90,7 @@
         <!-- End Work -->
             
         <!-- Contact -->
-        <div id="contact">
-            <div class="bg-color-sky-light">
-                <div class="container content-lg">
-                    <div class="row">
-                        <div class="col-sm-3 sm-margin-b-30">
-                            <div class="text-right sm-text-left">
-                                <h2 class="margin-b-0">Contacto</h2>
-                                <p>Contratame</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 col-sm-offset-1">
-                            <div class="row">
-                                <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5><i class="fa fa-building" aria-hidden="true"></i> Direccion</h5>
-                                    <a href="#">Maracay Edo, Aragua Venezuela</a>
-                                </div>
-                                <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5><i class="fa fa-phone" aria-hidden="true"></i> Telefono</h5>
-                                    <a href="#">+58 412 899 59 49 </a> <br>
-                                    <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i> +58 426 143 79 54</a>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <h5><i class="fa fa-envelope" aria-hidden="true"></i> Email</h5>
-                                    <a href="mailto:#">luis152288@gmail.com</a>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <h5><i class="fa fa-globe" aria-hidden="true"></i> Web</h5>
-                                    <a href="#">lipsum.com</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// end row -->
-                </div>
-            </div>
-        </div>
+        @yield ('contact')
         <!-- End Contact -->
         <!--========== END PAGE LAYOUT ==========-->
 

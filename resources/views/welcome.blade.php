@@ -7,3 +7,5 @@
 @include ('experience')
 
 @include ('works')
+
+@include ('contact')

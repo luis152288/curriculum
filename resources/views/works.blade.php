@@ -5,7 +5,7 @@
 	<div id="work">
             <div class="container content-lg">
                 <div class="row">
-                    <div class="col-sm-3 sm-margin-b-30">
+                    <div class="col-sm-2 sm-margin-b-30">
                         <div class="text-right sm-text-left">
                             <h2 class="margin-b-0">Works</h2>
                             <p>I build the real value.</p>

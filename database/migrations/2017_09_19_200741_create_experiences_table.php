@@ -17,7 +17,7 @@ class CreateExperiencesTable extends Migration
             $table->increments('id');
             $table->string('img');
             $table->string('titulo');
-            $table->string('descripcion');
+            $table->mediumText('descripcion');
             $table->enum('color', ['color-white', 'color-grey']);
             $table->enum('fondo', ['bg-color-base', 'no']);
             $table->timestamps();

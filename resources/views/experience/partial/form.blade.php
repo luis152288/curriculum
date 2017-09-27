@@ -5,8 +5,8 @@
 </div>
 
 <div class="form-group">
-    <input type="text" class="form-control" id="descripcion" name="descripcion" 
-        value="{{ $experiences->descripcion or old('descripcion') }}" placeholder="descripcion">                            
+    <textarea type="text" class="form-control" id="descripcion" name="descripcion" 
+        value="{{ $experiences->descripcion or old('descripcion') }}" placeholder="descripcion"></textarea>                             
 </div>
 
 <div class="container">

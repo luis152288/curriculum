@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\About;
 use App\Index;
 use App\Experiences;
+use App\Testimonials;
 use App\Works;
 
 class FrontendController extends Controller
@@ -15,7 +16,8 @@ class FrontendController extends Controller
         $index = Index::get();
         $about = About::get();
         $experiences = Experiences::get();
+        $testimonials = Testimonials::get();
         $works = Works::get();
-        return view('welcome', compact('index','about','experiences','works'));
+        return view('welcome', compact('index','about','experiences', 'testimonials','works'  ));
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class testimonials extends Model
+class Testimonials extends Model
 {
-    //
+     protected $fillable = [ 'mensaje', 'nombre' ];
 }

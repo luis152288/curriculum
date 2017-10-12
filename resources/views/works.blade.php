@@ -33,6 +33,9 @@
                                                 <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
                                                     <div class="margin-t-10 sm-margin-t-0">
                                                         <p>{{ $works->descripcion}}</p>
+
+                                                        <iframe class="full-width" src="{{ $works->link}}" frameborder="0"></iframe>
+
                                                         <ul class="list-inline work-popup-tag">
                                                             <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">{{ $works->tag1}}</a></li>
                                                             <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">{{ $works->tag2}}</a></li>

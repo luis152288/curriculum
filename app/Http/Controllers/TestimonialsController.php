@@ -3,9 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
+use App\Testimonials;
 
 class TestimonialsController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +24,8 @@ class TestimonialsController extends Controller
      */
     public function index()
     {
-        //
+         $testimonials = Testimonials::paginate();
+         return view('testimonials.index', compact('testimonials'));
     }
 
     /**
@@ -23,7 +35,8 @@ class TestimonialsController extends Controller
      */
     public function create()
     {
-        //
+        $testimonials = new Testimonials();
+        return view('testimonials.create', compact('testimonials'));
     }
 
     /**
@@ -34,7 +47,12 @@ class TestimonialsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         Testimonials::create([
+            'mensaje' => $request->input('mensaje'),
+            'nombre' => $request->input('nombre'),
+        ]);
+
+        return redirect('/testimonials')->with('mensaje', 'creacion exitosa');
     }
 
     /**
@@ -56,7 +74,8 @@ class TestimonialsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $testimonials = Testimonials::findOrFail($id);
+        return view('testimonials.edit', compact('testimonials'));
     }
 
     /**
@@ -68,7 +87,13 @@ class TestimonialsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $testimonials = Testimonials::findOrFail($id);
+        $testimonials->update([
+            'mensaje' => $request->input('mensaje'),
+            'nombre' => $request->input('nivel'),
+            ]);
+
+        return redirect('/testimonials')->with('mensaje', 'Actualizacion exitosa');
     }
 
     /**
@@ -79,6 +104,7 @@ class TestimonialsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Testimonials::destroy($id);
+        return redirect('/testimonials')->with('mensaje', 'eliminado');
     }
 }

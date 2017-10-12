@@ -26,6 +26,10 @@
  	<input type="textarea" name="descripcion" id="descripcion" class="form-control" placeholder="ingresa descripcion" value="{{ $works->descripcion or old('descripcion') }}" required>
  </div>
 
+ <div class="form-group">
+ 	<input type="textarea" name="link" id="link" class="form-control" placeholder="ingresa el link" value="{{ $works->link or old('link') }}" required>
+ </div>
+
  <div class="container">
 	<div class="row">
 		<div class="col-md-12">

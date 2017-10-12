@@ -22,6 +22,7 @@
                     		<td>TITULO</td>
                     		<td>SUBTITULO</td>
                     		<td>DESCRIPCION</td>
+                    		<td>LINK</td>
                     		<td>CLIENTE</td>
                     		<td colspan="3" width="10%">TAG</td>
                     		<td colspan="3" width="10%" >NOMBRES</td>
@@ -35,6 +36,7 @@
 								<th>{{ $works->titulo}}</th>
 								<th>{{ $works->subtitulo}}</th>
 								<th>{{ $works->descripcion}}</th>
+								<th>{{ $works->link}}</th>
 								<th>{{ $works->cliente}}</th>
 								<th>{{ $works->tag1}}</th>
 								<th>{{ $works->tag2}}</th>

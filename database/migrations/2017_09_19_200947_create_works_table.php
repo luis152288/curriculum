@@ -19,6 +19,7 @@ class CreateWorksTable extends Migration
             $table->string('titulo');
             $table->string('subtitulo');
             $table->mediumText('descripcion');
+            $table->string('link');
             $table->string('tag1');
             $table->string('tag2');
             $table->string('tag3');

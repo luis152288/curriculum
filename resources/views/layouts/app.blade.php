@@ -92,23 +92,13 @@
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="{{ url('/index') }}"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a><hr>
                     <a class="dropdown-item" href="{{ url('/about') }}"><i class="fa fa-address-card fa-2x" aria-hidden="true"></i> About</a><hr>
-                    <a class="dropdown-item" href="{{ url('/experience') }}"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i> Experience</a><hr>
+                    <a class="dropdown-item" href="{{ url('/experience') }}"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i> Servicios</a><hr>
+                     <a class="dropdown-item" href="#"><i class="fa fa-commenting-o  fa-2x" aria-hidden="true"></i> Testimonios</a><hr>
                     <a class="dropdown-item" href="{{ url('/works') }}"><i class="fa fa-building fa-2x" aria-hidden="true"></i> Work</a>
                   </div>
                 </div>
             </div>
           </div>
-
-          <!--  -->
-        <!--<div class="panel panel-default col-md-8">
-            <div>
-                <div>
-                        <div>
-                            
-                        </div>
-                </div>
-            </div>
-        </div>-->
     </div>
         @endauth
 

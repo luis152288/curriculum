@@ -1,0 +1,15 @@
+/*estilo de testimonios*/
+
+.bg-color{
+	background-color: #EEF2F8; 
+}
+
+.testimonios{
+	padding: 30px;
+}
+
+.testimonios-element,
+.testimonios-info{
+	@include translate3d(0,0,0);
+	@include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
+}

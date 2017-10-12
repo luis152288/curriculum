@@ -1,6 +1,11 @@
 <div class="form-group">
     <input type="text" class="form-control" id="skill" name="skill" 
-        value="{{ $about->skill or old('skill') }}" placeholder="ingresa una habilidad">                            
+        value="{{ $about->skill or old('skill') }}" placeholder="ingresa una habilidad">
+     @if ($errors->has('imagen'))
+        <span class="help-block">
+        	<strong>{{ $errors->first('imagen') }}</strong>
+        </span>
+    @endif
 </div>
 
 <div class="form-group">

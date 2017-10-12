@@ -22,6 +22,7 @@
 
         <!-- THEME STYLES -->
         <link href="{{ asset('css/layout.min.css')}}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="{{asset('vendor/simple-line-icons/css/style.css')}}"/>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
@@ -59,7 +60,8 @@
                             <ul class="nav navbar-nav navbar-nav-right">
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Inicio</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">Sobre mi</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experiencias</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Servicios</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#Testimonios">testimonios</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Trabajos</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contacto</a></li>
                             </ul>
@@ -84,6 +86,10 @@
         <!-- Experience -->
         @yield ('experience')
         <!-- End Experience -->
+
+        <!-- testimonials -->
+        @yield ('testimonials')
+        <!-- End testimonials -->
 
         <!-- Work -->
         @yield ('works')
@@ -111,7 +117,7 @@
         <!--========== END FOOTER ==========-->
 
         <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
         <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
         <!-- CORE PLUGINS -->

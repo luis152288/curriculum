@@ -7,8 +7,8 @@
                     <div class="row">
                         <div class="col-sm-2 sm-margin-b-30">
                             <div class="text-right sm-text-left">
-                                <h2 class="margin-b-0">Experiencias</h2>
-                                <p></p>
+                                <h2 class="margin-b-0">Servicios</h2>
+                                <p>Desde el diseño y la funcionalidad de tu web, hasta tu imagen corparativa. nos encargamos de todo lo que necesites.</p>
                             </div>
                         </div>
                         <div class="col-sm-8 col-sm-offset-1">

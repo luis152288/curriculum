@@ -11,7 +11,7 @@
 			</div>
         	@endif
             <div class="panel panel-default">
-                <div class="panel-heading">Seccion experience</div>
+                <div class="panel-heading">Seccion servicios</div>
                 <div class="panel-body">
 					<a href="{{ url('/experience/create') }}" class="btn btn-primary">Crear</a><hr>
                     <table class="table table-bordered">

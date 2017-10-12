@@ -6,6 +6,8 @@
 
 @include ('experience')
 
+@include ('testimonials')
+
 @include ('works')
 
 @include ('contact')

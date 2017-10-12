@@ -4,7 +4,7 @@
 
 @section ('contact')
 	<div id="contact">
-            <div class="bg-color-sky-light">
+            <div class="bg-color">
                 <div class="container content-lg">
                     <div class="row">
                         <div class="col-sm-2 ">

@@ -52,11 +52,11 @@
 								<th>
 									<a href="javascript:void();" class="btn btn-danger"
 										onclick="event.preventDefault();
-                                                     document.getElementById('delete-works-form').submit();">
+                                                  document.getElementById('delete-works-form').submit();">
 										<i class="fa fa-trash"></i>
 									</a>
 									<form id="delete-works-form" action="{{ url('/works/'.$works->id) }}" method="post">
-										{{ method_field('DELETE')}}
+										{{ method_field('DELETE') }}
 										{{ csrf_field() }}						
 									</form>
 								</th>

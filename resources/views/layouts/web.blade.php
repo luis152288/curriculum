@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="{{asset('vendor/simple-line-icons/css/style.css')}}"/>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico"/>
+         <link rel="icon" href="{{asset('img/logo.png')}}">
     </head>
     <!-- END HEAD -->
 

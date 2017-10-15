@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="col-md-2 col-xs-6">
                                     <h5><i class="fa fa-globe" aria-hidden="true"></i> Web</h5>
-                                    <a href="#">lipsum.com</a>
+                                    <a href="http://lmunoz.epizy.com" class="text-center">lmunoz.epizy.com</a>
                                 </div>
                                   <div class="col-md-2 col-xs-6">
                                     <h5><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</h5>

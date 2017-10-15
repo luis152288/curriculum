@@ -1,12 +1,12 @@
 
 <div class="form-group">
     <input type="text" class="form-control" id="titulo" name="titulo" 
-        value="{{ $experiences->titulo or old('titulo') }}" placeholder="ingresa un titulo">                            
+        value="{{ $experiences->titulo or old('titulo') }}" placeholder="ingresa un titulo" required>                            
 </div>
 
 <div class="form-group">
     <textarea type="text" class="form-control" id="descripcion" name="descripcion" 
-        value="{{ $experiences->descripcion or old('descripcion') }}" placeholder="descripcion"></textarea>                             
+        value="{{ $experiences->descripcion or old('descripcion') }}" placeholder="descripcion" required></textarea>                             
 </div>
 
 <div class="container">
@@ -14,11 +14,11 @@
 		<div class="col-md-8">
 				<div class="form-group col-md-3">
 					<input type="text" class="form-control" id="img" name="img" 
-        			value="{{ $experiences->img or old('img') }}" placeholder="imagen"> 
+        			value="{{ $experiences->img or old('img') }}" placeholder="imagen" required> 
 				</div>
 				<div class="form-group col-md-4">
 					<select name="color" id="color" class="form-control" required>
-						<option >seleccione un color</option>
+						<option >seleccione un color de fuente</option>
 						<option value="color-white" @if($experiences->color == 'color-white') selected @endif>Blanco</option>
 						<option value="color-grey" @if($experiences->color == 'color-grey') selected @endif>Gris</option>
 					</select>

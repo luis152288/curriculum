@@ -8,11 +8,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Lemd') }}</title>
+    <title> Dashboard </title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
+
+    <link rel="icon" href="{{asset('img/logo.png')}}">
 
     <style>
         .dropdown-menu a{
